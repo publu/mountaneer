@@ -15,7 +15,7 @@ async function main() {
   // await hre.run('compile')
 
   // We get the contract to deploy
-  const L2Contract = await hre.ethers.getContractFactory('L2Contract')
+  const L2Contract = await hre.ethers.getContractFactory('L2Oracle')
   const l1ContractAddress = process.env.L1_CONTRACT
   const l2BridgeAddress = '0xF6BEEeBB578e214CA9E23B0e9683454Ff88Ed2A7'
   const l2Contract = await L2Contract.deploy(l1ContractAddress, l2BridgeAddress)

@@ -17,12 +17,12 @@ async function main() {
   const l1BridgeAddress = '0xF6BEEeBB578e214CA9E23B0e9683454Ff88Ed2A7'
 
   // We get the contract to deploy
-  const L1Contract = await hre.ethers.getContractFactory('L1Contract')
-  const l1Contract = await L1Contract.deploy(l1BridgeAddress)
+  const L1Oracle = await hre.ethers.getContractFactory('L1Oracle')
+  const l1Oracle = await L1Oracle.deploy(l1BridgeAddress)
 
-  await l1Contract.deployed()
+  await l1Oracle.deployed()
 
-  console.log('L1Contract deployed to:', l1Contract.address)
+  console.log('L1Oracle deployed to:', l1Oracle.address)
 }
 
 // We recommend this pattern to be able to use async/await everywhere
